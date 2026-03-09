@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odido Datalek Crisis Analyse 2026 | ICT Perspectief</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #0f3460;
+            --accent: #e94560;
+            --light: #f8f9fa;
+            --text: #2d3436;
+            --border: #dfe6e9;
+            --highlight: #fdcb6e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(255,255,255,0.02) 10px,
+                    rgba(255,255,255,0.02) 20px
+                );
+            animation: slidePattern 20s linear infinite;
+        }
+
+        @keyframes slidePattern {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(20px); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .crisis-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            opacity: 0.8;
+            animation: fadeInUp 0.6s ease-out 0.6s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            animation: slideDown 0.6s ease-out 0.8s both;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 20px 25px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 80%;
+            height: 3px;
+            background: var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        section {
+            margin-bottom: 80px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin: 40px 0 20px;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin: 30px 0 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        /* Info Cards */
+        .info-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--accent);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .info-card strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, var(--accent) 0%, #c23754 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(233, 69, 96, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Crimson Pro', serif;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--accent), var(--secondary));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -47px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--light);
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        /* Model Boxes */
+        .model-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 35px;
+            margin: 30px 0;
+            border: 2px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .model-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary);
+        }
+
+        .model-title {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        /* Action Cards */
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .action-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent), var(--highlight));
+        }
+
+        .action-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .action-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .action-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Lists */
+        ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        li::marker {
+            color: var(--accent);
+        }
+
+        /* Reflection Box */
+        .reflection-box {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 40px rgba(15, 52, 96, 0.3);
+        }
+
+        .reflection-box h3 {
+            color: white;
+            margin-top: 20px;
+        }
+
+        .reflection-box p {
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 15px 20px;
+            }
+
+            .action-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Highlight text */
+        .highlight {
+            background: var(--highlight);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        /* Quote styling */
+        .quote {
+            border-left: 4px solid var(--accent);
+            padding-left: 25px;
+            margin: 30px 0;
+            font-style: italic;
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <span class="crisis-badge">⚠️ Crisis Analyse 2026</span>
+            <h1>De Odido Datalek Crisis</h1>
+            <p class="hero-subtitle">Een ICT-perspectief op de grootste telecom hack van Nederland</p>
+            <div class="hero-meta">
+                <span>📅 Februari 2026</span>
+                <span>👤 ICT Student Analyse</span>
+                <span>🎯 6,2 miljoen klanten getroffen</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#beschrijving">Beschrijving</a></li>
+            <li><a href="#analyse">Analyse</a></li>
+            <li><a href="#modellen">Theoretische Modellen</a></li>
+            <li><a href="#handelingen">Handelingsperspectieven</a></li>
+            <li><a href="#reflectie">Reflectie</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Beschrijving -->
+        <section id="beschrijving">
+            <h2>1. Beschrijving van de Crisis</h2>
+            
+            <h3>Wat gebeurde er?</h3>
+            <div class="info-card">
+                <p>Op <strong>12 februari 2026</strong> maakte Odido bekend dat het slachtoffer was geworden van een cyberaanval waarbij persoonsgegevens van <strong>6,2 miljoen klantaccounts</strong> werden gestolen. De hack vond plaats in het weekend van 7-8 februari 2026.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">6,2M</span>
+                    <span class="stat-label">Getroffen klanten</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">€1M</span>
+                    <span class="stat-label">Losgeld geëist</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">3x</span>
+                    <span class="stat-label">Meer overstappers</span>
+                </div>
+            </div>
+
+            <h3>Tijdlijn van gebeurtenissen</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Weekend 7-8 februari 2026</div>
+                    <p>Hackers krijgen toegang via phishing en social engineering</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">12 februari 2026</div>
+                    <p>Odido maakt datalek publiekelijk bekend</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Na bekendmaking</div>
+                    <p>ShinyHunters eist €1 miljoen losgeld</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Na weigering</div>
+                    <p>Alle data gepubliceerd op dark web</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Heden (maart 2026)</div>
+                    <p>Doorlopende gevolgen: juridische procedures en klantverlies</p>
+                </div>
+            </div>
+
+            <h3>Gestolen gegevens</h3>
+            <div class="info-card">
+                <ul>
+                    <li><strong>Persoonlijke informatie:</strong> Namen, adressen, telefoonnummers</li>
+                    <li><strong>Contactgegevens:</strong> E-mailadressen, klantnummers</li>
+                    <li><strong>Financiële data:</strong> Bankrekeningnummers</li>
+                    <li><strong>Identiteitsbewijzen:</strong> Paspoort- en ID-nummers met geldigheidsdatum</li>
+                    <li><strong>Interne notities:</strong> Persoonlijke klantaantekeningen van medewerkers</li>
+                </ul>
+            </div>
+
+            <h3>Hoe gebeurde het?</h3>
+            <p>Via <span class="highlight">phishing en social engineering</span> kregen hackers medewerkers zover om inloggegevens én 2FA-codes te delen, waarna ze toegang kregen tot het klantcontactsysteem.</p>
+
+            <div class="quote">
+                "Dit is niet alleen een technisch falen, maar vooral een menselijk falen in security awareness."
+            </div>
+        </section>
+
+        <!-- Analyse -->
+        <section id="analyse">
+            <h2>2. Analyse: Menselijke Factoren</h2>
+            
+            <h3>Menselijke factoren VOOR de crisis</h3>
+            <p><strong>Vanuit ICT-perspectief waren er drie grote kwetsbaarheden:</strong></p>
+
+            <div class="model-box">
+                <div class="model-title">1️⃣ Onvoldoende Security Awareness</div>
+                <p>Medewerkers trapten in phishing e-mails en gaven zelfs 2FA-codes door - een basisfout in cybersecurity. Dit wijst op gebrek aan training en bewustzijn.</p>
+            </div>
+
+            <div class="model-box">
+                <div class="model-title">2️⃣ Social Engineering Kwetsbaarheid</div>
+                <p>Hackers deden zich voor als IT-helpdesk of leidinggevenden om medewerkers te misleiden. Dit toont aan dat er geen adequate verificatieprotocollen waren.</p>
+            </div>
+
+            <div class="model-box">
+                <div class="model-title">3️⃣ Datamanagement Probleem</div>
+                <p>Waarom stonden paspoortgegevens en persoonlijke aantekeningen in een klantenservicesysteem? Te veel gevoelige data op één plek zonder extra beveiliging.</p>
+            </div>
+
+            <h3>Reacties TIJDENS de crisis</h3>
+            
+            <h4>IT Security Team:</h4>
+            <ul>
+                <li><strong>Stress en urgentie:</strong> Onmiddellijke actie om toegang te blokkeren</li>
+                <li><strong>Forensisch onderzoek:</strong> Scope van de schade bepalen</li>
+                <li><strong>24/7 inzet:</strong> Doorwerken om verdere schade te voorkomen</li>
+            </ul>
+
+            <h4>Management:</h4>
+            <ul>
+                <li><strong>Juridische afweging:</strong> Dilemma tussen transparantie en bescherming bedrijfsbelang</li>
+                <li><strong>Losgeld beslissing:</strong> Weigering te betalen op advies van experts (juiste keuze)</li>
+                <li><strong>Reputatie-angst:</strong> Vooral met beursgang in zicht</li>
+            </ul>
+
+            <h4>Klanten (na bekendmaking):</h4>
+            <ul>
+                <li><strong>Shock en ongeloof:</strong> "Dit kan toch niet bij zo'n groot bedrijf?"</li>
+                <li><strong>Woede:</strong> Over de slechte beveiliging en late ontdekking</li>
+                <li><strong>Angst:</strong> Voor identiteitsfraude en phishing aanvallen</li>
+                <li><strong>Machteloosheid:</strong> Geen controle meer over eigen data</li>
+            </ul>
+
+            <h3>Reacties NA de crisis</h3>
+            <div class="info-card">
+                <p><strong>Klanten:</strong> Verhoogde waakzaamheid, massale overstap naar concurrenten, blijvend wantrouwen</p>
+                <p><strong>Odido:</strong> Enorme reputatieschade, juridische procedures, gedwongen investeringen in security (te laat)</p>
+            </div>
+        </section>
+
+        <!-- Theoretische Modellen -->
+        <section id="modellen">
+            <h2>3. Theoretische Modellen</h2>
+
+            <div class="model-box">
+                <h3>Model 1: Besluitvorming onder Stress</h3>
+                <h4>Theory: Recognition-Primed Decision Making</h4>
+                <p>Onder stress maken mensen snelle beslissingen op basis van herkenning van patronen, niet via rationeel afwegen van alle opties.</p>
+
+                <h4>Toepassing op de Odido Crisis:</h4>
+                
+                <p><strong>Medewerkers die phishing slachtoffer werden:</strong></p>
+                <ul>
+                    <li><strong>Tijdsdruk:</strong> "DRINGEND! Inloggen NU of je account wordt geblokkeerd"</li>
+                    <li><strong>Stress response:</strong> Paniek leidde tot snel handelen zonder nadenken</li>
+                    <li><strong>Patroonherkenning faalde:</strong> E-mail leek echt, dus automatisch vertrouwd</li>
+                    <li><strong>Resultaat:</strong> Gaven inloggegevens en 2FA-codes weg</li>
+                </ul>
+
+                <p><strong>Management tijdens crisis:</strong></p>
+                <ul>
+                    <li><strong>Onzekerheid:</strong> Onduidelijk hoeveel data gestolen was</li>
+                    <li><strong>Ervaringsgedreven:</strong> Gebruikten eerdere datalek protocollen (2024)</li>
+                    <li><strong>Snelle beslissing:</strong> Geen losgeld betalen</li>
+                    <li><strong>Betere communicatie:</strong> Binnen 4 dagen bekend gemaakt (vs 5 maanden in 2024)</li>
+                </ul>
+
+                <p><strong>Wat dit verklaart:</strong> De phishing werkte omdat medewerkers onder stress hun normale security-gedrag vergaten. Management nam betere beslissingen dan in 2024 omdat ze nu ervaring hadden.</p>
+            </div>
+
+            <div class="model-box">
+                <h3>Model 2: Menselijk Gedrag in Crisis (Fight/Flight/Freeze)</h3>
+                <h4>Theory: Stress Response Systeem</h4>
+                <p>Bij extreme stress reageert het brein met drie primitieve overlevingsresponsen:</p>
+                <ul>
+                    <li><strong>Fight:</strong> Actief probleem aanpakken</li>
+                    <li><strong>Flight:</strong> Vermijden, ontkennen, vluchten</li>
+                    <li><strong>Freeze:</strong> Verlamming, geen actie kunnen ondernemen</li>
+                </ul>
+
+                <h4>Toepassing op verschillende groepen:</h4>
+                
+                <p><strong>IT Security Team - Fight Response:</strong></p>
+                <ul>
+                    <li>Onmiddellijk in actie: systemen isoleren, toegangen blokkeren</li>
+                    <li>Forensisch onderzoek opstarten</li>
+                    <li>Samenwerking met externe experts</li>
+                    <li><strong>Resultaat:</strong> Technisch goed aangepakt</li>
+                </ul>
+
+                <p><strong>Management - Fight (beter dan 2024):</strong></p>
+                <ul>
+                    <li>Deze keer WEL snel communiceren (4 dagen vs 5 maanden)</li>
+                    <li>Geen losgeld betalen (moeilijke maar juiste keuze)</li>
+                    <li>Proactief klanten informeren</li>
+                    <li><strong>Resultaat:</strong> Betere crisis-respons door eerdere ervaring</li>
+                </ul>
+
+                <p><strong>Medewerkers die phishing ontvingen - Freeze Response:</strong></p>
+                <ul>
+                    <li>Paniekerig, niet kritisch kunnen denken</li>
+                    <li>Automatisch reageren op "autoriteit"</li>
+                    <li>Achteraf schuldgevoel en schaamte</li>
+                    <li><strong>Resultaat:</strong> Werden de zwakste schakel</li>
+                </ul>
+
+                <p><strong>Klanten - Mixed Response:</strong></p>
+                <ul>
+                    <li><strong>Fight:</strong> Boze reacties, overstappen, juridische stappen</li>
+                    <li><strong>Flight:</strong> Negeren van waarschuwingen, "mij overkomt het niet"</li>
+                    <li><strong>Freeze:</strong> Overweldigd, niet weten wat te doen</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Handelingsperspectieven -->
+        <section id="handelingen">
+            <h2>4. Handelingsperspectieven</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 40px;">Drie concrete acties om de veerkracht van betrokkenen te versterken in toekomstige crisissituaties:</p>
+
+            <div class="action-grid">
+                <!-- Actie 1 -->
+                <div class="action-card">
+                    <div class="action-number">1</div>
+                    <div class="action-title">Anti-Phishing Training met Simulaties</div>
+                    
+                    <h4>Voor wie:</h4>
+                    <p>Alle medewerkers van Odido</p>
+
+                    <h4>Theoretische onderbouwing:</h4>
+                    <p><strong>Stress Inoculation Training</strong> - Door regelmatig te oefenen wordt de freeze-response minder en leren mensen onder druk beter te reageren.</p>
+
+                    <h4>Concrete actie:</h4>
+                    <ul>
+                        <li>Maandelijks realistische phishing e-mails sturen</li>
+                        <li>Wie klikt krijgt educatie (geen straf!)</li>
+                        <li>Gamification: beste scores krijgen erkenning</li>
+                        <li>Training: "Hoe herken je social engineering?"</li>
+                        <li><strong>Gouden regel:</strong> Nooit 2FA-codes delen, ook niet met "IT-helpdesk"</li>
+                    </ul>
+
+                    <h4>Verwacht resultaat:</h4>
+                    <p>80% minder klikken op phishing binnen 6 maanden. Medewerkers worden "menselijke firewall".</p>
+                </div>
+
+                <!-- Actie 2 -->
+                <div class="action-card">
+                    <div class="action-number">2</div>
+                    <div class="action-title">Zero-Trust Architectuur</div>
+                    
+                    <h4>Voor wie:</h4>
+                    <p>IT-infrastructuur en security team</p>
+
+                    <h4>Theoretische onderbouwing:</h4>
+                    <p><strong>Defense in Depth principe</strong> - Één beveiligingslaag is niet genoeg, je hebt meerdere lagen nodig.</p>
+
+                    <h4>Concrete actie:</h4>
+                    <p><strong>"Never trust, always verify"</strong></p>
+                    <ul>
+                        <li><strong>MFA voor ALLE systemen</strong>, niet alleen e-mail</li>
+                        <li><strong>Least Privilege Access:</strong> Alleen toegang tot wat echt nodig is</li>
+                        <li><strong>Continuous Verification:</strong> Elke actie wordt geverifieerd</li>
+                        <li><strong>Microsegmentatie:</strong> Netwerk opdelen zodat hackers niet vrij kunnen rondkijken</li>
+                        <li><strong>Anomalie-detectie:</strong> AI die ongewoon gedrag detecteert</li>
+                    </ul>
+
+                    <h4>Specifiek voor Odido:</h4>
+                    <p>Waarom kunnen medewerkers 6,2 miljoen accounts zien? Beperk tot 100 per dag. Gevoelige data (paspoorten) alleen met manager-goedkeuring.</p>
+
+                    <h4>Verwacht resultaat:</h4>
+                    <p>Als één medewerker gehackt wordt, kan hacker niet bij alle data. Snellere detectie van abnormaal gedrag.</p>
+                </div>
+
+                <!-- Actie 3 -->
+                <div class="action-card">
+                    <div class="action-number">3</div>
+                    <div class="action-title">Crisis Kit voor Klanten</div>
+                    
+                    <h4>Voor wie:</h4>
+                    <p>Klanten die getroffen zijn door datalek</p>
+
+                    <h4>Theoretische onderbouwing:</h4>
+                    <p><strong>Psychological First Aid</strong> - Na trauma hebben mensen behoefte aan veiligheid, informatie, controle en hoop.</p>
+
+                    <h4>Concrete actie - Direct aanbieden:</h4>
+                    
+                    <p><strong>1. Persoonlijk Dashboard:</strong></p>
+                    <ul>
+                        <li>Welke van JOUW data is gelekt</li>
+                        <li>Wat is het risico voor jou persoonlijk</li>
+                        <li>Concrete stappen die je moet nemen</li>
+                    </ul>
+
+                    <p><strong>2. Gratis Bescherming (2 jaar):</strong></p>
+                    <ul>
+                        <li>Credit monitoring</li>
+                        <li>Dark web monitoring</li>
+                        <li>Identiteitsfraude verzekering</li>
+                        <li>24/7 hulplijn</li>
+                    </ul>
+
+                    <p><strong>3. Compensatie:</strong></p>
+                    <ul>
+                        <li>6 maanden korting op abonnement</li>
+                        <li>Gratis contract-beëindiging</li>
+                    </ul>
+
+                    <p><strong>4. Wekelijkse Updates:</strong></p>
+                    <ul>
+                        <li>Wat doet Odido om herhaling te voorkomen?</li>
+                        <li>Status van onderzoek</li>
+                        <li>Nieuwe beveiligingsmaatregelen</li>
+                    </ul>
+
+                    <h4>Verwacht resultaat:</h4>
+                    <p>Minder klantverlies (nu 3x meer overstappers), sneller vertrouwensherstel, klanten voelen zich serieus genomen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflectie -->
+        <section id="reflectie">
+            <h2>5. Individuele Reflectie</h2>
+            
+            <div class="reflection-box">
+                <h3>Hoe reageerden betrokkenen?</h3>
+                <p>Wat me opviel is het verschil tussen de technische respons (goed) en de menselijke factor (zwak). Het IT-team handelde professioneel, maar individuele medewerkers waren kwetsbaar voor social engineering. De klanten reageerden met begrijpelijke boosheid en angst - hun vertrouwen is geschaad.</p>
+                <p>Het management deed het beter dan bij de 2024 hack: snellere communicatie en geen losgeld betalen was de juiste keuze. Maar preventie had beter gekund.</p>
+
+                <h3>Hoe zou ik zelf handelen?</h3>
+                <p><strong>Als ik die phishing e-mail kreeg:</strong></p>
+                <ul>
+                    <li><strong>Altijd</strong> verificeren via ander kanaal (bel IT terug via officieel nummer)</li>
+                    <li><strong>Nooit</strong> 2FA-codes delen, ook niet met "de baas"</li>
+                    <li>Bij twijfel: niet klikken, IT-security waarschuwen</li>
+                </ul>
+
+                <p><strong>Als onderdeel van crisis-team:</strong></p>
+                <ul>
+                    <li>Focus op technische respons: systemen isoleren, forensisch onderzoek</li>
+                    <li>Transparant communiceren: liever snel met incomplete info dan lang wachten</li>
+                    <li>Samenwerken met politie en externe experts</li>
+                    <li>Leren van incident voor de toekomst</li>
+                </ul>
+
+                <h3>Mijn sterke punten</h3>
+                <p><strong>Technische kennis:</strong> Ik begrijp hoe phishing werkt en kan systemen beveiligen. Ik zou kunnen helpen bij het opzetten van betere security maatregelen.</p>
+                <p><strong>Kritisch denken:</strong> Ik ben van nature wantrouwig bij "dringende" e-mails en zou waarschijnlijk niet op phishing trappen.</p>
+                <p><strong>Probleemoplossend vermogen:</strong> Onder druk kan ik analytisch blijven en stap-voor-stap een probleem aanpakken.</p>
+
+                <h3>Mijn ontwikkelpunten</h3>
+                <p><strong>Stress-management:</strong> In een echte crisis met miljoenen getroffen klanten zou de druk enorm zijn. Ik moet leren om onder extreme stress helder te blijven denken.</p>
+                <p><strong>Communicatie:</strong> Als ICT'er ben ik goed in technische oplossingen, maar ik moet beter worden in uitleggen aan management en klanten zonder jargon.</p>
+                <p><strong>Leadership:</strong> Ik zou moeten oefenen met het leiden van een team tijdens crisis-simulaties.</p>
+                <p><strong>Empathie:</strong> Als technicus focus ik op "de hack stoppen", maar ik moet ook aandacht hebben voor de emotionele impact op klanten.</p>
+
+                <h3>Hoe ga ik mezelf ontwikkelen?</h3>
+                <ul>
+                    <li>Security certificeringen halen (CompTIA Security+, CEH)</li>
+                    <li>Deelnemen aan Capture The Flag competities</li>
+                    <li>Crisis-simulaties bij school of stage</li>
+                    <li>Soft skills training: presenteren, empathisch communiceren</li>
+                    <li>Blijven leren: cybersecurity verandert constant</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Crisisanalyse Odido Datalek | ICT Student Perspectief</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">Gemaakt voor Leeruitkomst 2 - Crisis & Ramp Management</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .info-card, .model-box, .action-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Active nav link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.color = 'var(--accent)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
