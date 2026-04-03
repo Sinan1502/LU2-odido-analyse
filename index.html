@@ -73,6 +73,8 @@
         .bronnen-box li { font-size: 0.97rem; margin-bottom: 16px; line-height: 1.7; }
         .rol-badge { display: inline-block; background: var(--secondary); color: white; padding: 10px 22px; border-radius: 8px; font-size: 0.97rem; font-weight: 600; margin-bottom: 20px; }
         .vergelijk-box { background: white; border-radius: 12px; padding: 30px; margin: 30px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 5px solid var(--secondary); }
+        .ai-box { background: #fff8e1; border-radius: 12px; padding: 25px 30px; margin: 30px 0; border-left: 5px solid var(--highlight); font-size: 0.97rem; }
+        .ai-box strong { color: var(--secondary); }
         footer { background: var(--primary); color: white; text-align: center; padding: 40px 20px; margin-top: 80px; }
         footer p { opacity: 0.8; }
         @media (max-width: 768px) { h1 { font-size: 2.2rem; } h2 { font-size: 2rem; } .hero-meta { flex-direction: column; gap: 10px; } nav ul { flex-direction: column; } nav a { padding: 12px 20px; } .action-grid { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: 1fr; } .reflection-box { padding: 30px; } }
@@ -115,12 +117,13 @@
 
         <div class="info-card">
             <span class="rol-badge">🎓 Mijn rol: ICT-student</span>
-            <p>Ik schrijf deze analyse als tweedejaars ICT-student. Ik ben nog geen professional, maar ik kijk naar deze crisis vanuit wat ik al weet over hoe systemen werken en hoe mensen daarbinnen fouten kunnen maken. Dat perspectief gebruik ik in deze analyse.</p>
+            <p>Ik schrijf deze analyse als tweedejaars ICT-student. Dat betekent dat ik anders kijk dan bijvoorbeeld een veiligheidskundige of crisismanager. Die zou vooral kijken naar regels, procedures en verantwoordelijkheden binnen de organisatie. Ik kijk vooral naar <strong>hoe het systeem in elkaar zat en waar het technisch misging</strong>: welke keuzes maakten deze hack mogelijk, en wat had het kunnen voorkomen?</p>
+            <p>Dat geeft een andere invalshoek. Ik snap de technische kant goed, maar juridische aansprakelijkheid of organisatiepolitiek is minder mijn terrein. Dat houd ik in mijn achterhoofd.</p>
         </div>
 
         <h3>Wat gebeurde er?</h3>
         <p>In het weekend van 7 en 8 februari 2026 werd Odido gehackt. Hackers stuurden neppe e-mails en belden medewerkers op waarbij ze zich voordeden als collega's of IT-medewerkers. Zo overtuigden ze mensen om hun inloggegevens én hun 2FA-codes te delen. Daarna konden de hackers gewoon inloggen op het systeem, alsof ze een echte medewerker waren.</p>
-        <p>Op 12 februari maakte Odido het nieuws publiekelijk bekend. De hackers een groep genaamd ShinyHunters eisten daarna een miljoen euro losgeld. Odido weigerde te betalen, waarna alle gestolen data op het dark web werd gepubliceerd.</p>
+        <p>Op 12 februari maakte Odido het nieuws publiekelijk bekend. De hackers, een groep genaamd ShinyHunters, eisten daarna een miljoen euro losgeld. Odido weigerde te betalen, waarna alle gestolen data op het dark web werd gepubliceerd.</p>
 
         <div class="stats-grid">
             <div class="stat-box"><span class="stat-number">6,2M</span><span class="stat-label">Getroffen klanten</span></div>
@@ -132,7 +135,7 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-date">Weekend 7–8 februari 2026</div>
-                <p>Hackers misleiden medewerkers via phishing en social engineering inloggegevens en 2FA-codes worden weggegeven</p>
+                <p>Hackers misleiden medewerkers via phishing en social engineering. Inloggegevens en 2FA-codes worden weggegeven</p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-date">12 februari 2026</div>
@@ -167,7 +170,7 @@
         <p>Via <span class="highlight">phishing en social engineering</span> overtuigden de hackers medewerkers om hun inloggegevens én 2FA-codes te delen. Er was geen geavanceerde technische aanval nodig. Alleen mensen misleiden was genoeg. Dat is precies wat dit zo schokkend maakt.</p>
 
         <div class="quote">
-            "De menselijke factor is de meest onderschatte risicofactor in crisismanagement." Zanders (2022, p. 47)
+            "De menselijke factor is de meest onderschatte risicofactor in crisismanagement." - Zanders (2022, p. 47)
         </div>
     </section>
 
@@ -176,21 +179,24 @@
         <h2>2. Analyse: Menselijke Factoren</h2>
 
         <h3>Wat ging er mis vóór de crisis?</h3>
-        <p>Als ik kijk naar wat er is misgegaan vanuit mijn ICT-kennis, zie ik drie duidelijke problemen:</p>
+        <p>Als ICT-student zie ik drie dingen die deze crisis niet alleen mogelijk maakten, maar ook zo groot maakten. Het gaat er niet alleen om wat er misging, maar ook om <em>waarom</em> die problemen er überhaupt waren.</p>
 
         <div class="model-box">
             <div class="model-title">1️⃣ Medewerkers wisten niet goed genoeg hoe phishing werkt</div>
             <p>Ze trapten in neppe berichten en gaven zelfs hun 2FA-codes weg. Een 2FA-code is de tweede sleutel van je account en die deel je nooit met niemand. Dat dit toch gebeurde, wijst op onvoldoende training. Zanders (2022) beschrijft dit patroon: veiligheidsgedrag wordt in veel organisaties aangeleerd via regels, maar niet via oefening. Zonder herhaling vergeet je het gewoon.</p>
+            <p>Vanuit ICT-perspectief is dit ook een ontwerpfout. Als 2FA de enige extra beveiligingslaag is, dan is de medewerker de laatste verdediging. Dat is risicovol. Want als die medewerker het onder druk fout doet, is er niets meer wat de aanval tegenhoudt.</p>
         </div>
 
         <div class="model-box">
             <div class="model-title">2️⃣ Er was geen manier om te controleren wie je aan de lijn hebt</div>
-            <p>Hackers deden zich voor als IT-helpdesk of leidinggevenden. Medewerkers vertrouwden dat zonder te checken. Er waren geen verificatieprotocollen een systeem om te bevestigen of iemand echt van het bedrijf is. Dat ontbrak volledig.</p>
+            <p>Hackers deden zich voor als IT-helpdesk of leidinggevenden. Medewerkers vertrouwden dat zonder te checken. Er waren geen verificatieprotocollen, dus geen manier om te bevestigen of iemand echt van het bedrijf is. Dat ontbrak volledig.</p>
+            <p>In ICT noemen we dit "identity spoofing": als er geen manier is om te controleren wie iemand echt is, kan iemand zich makkelijk voordoen als een vertrouwde persoon. Technisch is dit op te lossen, maar Odido had dit nog niet ingericht.</p>
         </div>
 
         <div class="model-box">
             <div class="model-title">3️⃣ Te veel gevoelige data stond op één plek</div>
-            <p>Paspoortgegevens en persoonlijke notities horen niet in een standaard klantenservicesysteem. Door alles op één plek te zetten, hadden hackers na één succesvolle inlog toegang tot de gegevens van 6,2 miljoen mensen. Dat is een fundamenteel datamanagementprobleem.</p>
+            <p>Paspoortgegevens en persoonlijke notities horen niet in een gewoon klantenservicesysteem. Door alles op één plek te zetten, hadden hackers na één succesvolle inlog toegang tot de gegevens van 6,2 miljoen mensen. Dat is een groot probleem in hoe de data was opgezet. Het is ook in strijd met de AVG, die zegt dat je alleen de gegevens mag bewaren die echt nodig zijn.</p>
+            <p>Vanuit mijn ICT-perspectief is dit het meest schokkende. Niet de phishing zelf, maar dat het systeem zo ingericht was dat één fout toegang gaf tot alles. Een veiligheidskundige zou misschien kijken naar de meldplicht en aansprakelijkheid. Ik zie hier een fundamenteel probleem in de opbouw van het systeem.</p>
         </div>
 
         <h3>Hoe reageerden mensen tijdens de crisis?</h3>
@@ -199,10 +205,11 @@
         <p>Ze reageerden professioneel: systemen afsluiten, forensisch onderzoek starten, externe experts inschakelen. Ze werkten dag en nacht. Dit is precies de reactie die je wil zien van een technisch team in een crisis.</p>
 
         <h4>Het management</h4>
-        <p>Hier zie je een duidelijk verschil met de vorige Odido-hack in 2024. Toen duurde het vijf maanden voor ze iets zeiden. Nu vier dagen. Ze besloten ook geen losgeld te betalen een moeilijke maar goede keuze. Er was dus leereffect. Tegelijkertijd zie je dat de geplande beursgang van Odido extra druk gaf: reputatieschade woog extra zwaar.</p>
+        <p>Hier zie je een duidelijk verschil met de vorige Odido-hack in 2024. Toen duurde het vijf maanden voor ze iets zeiden. Nu vier dagen. Ze besloten ook geen losgeld te betalen. Dat was een moeilijke maar goede keuze. Er was dus leereffect. Tegelijkertijd zie je dat de geplande beursgang van Odido extra druk gaf. Reputatieschade woog extra zwaar, wat de besluitvorming ook beïnvloedde.</p>
 
         <h4>De medewerkers die de phishing ontvingen</h4>
-        <p>Dit is de meest interessante groep. Ze deden niets stoms uit zichzelf ze werden slim gemanipuleerd. De urgentie in de berichten ("nu meteen inloggen of je account wordt geblokkeerd!") zorgde voor stress, en onder stress stopt het kritisch denken. Ze reageerden automatisch. Achteraf zullen velen zich schuldig hebben gevoeld, terwijl het eigenlijk een systeemprobleem was: ze zijn nooit goed genoeg getraind.</p>
+        <p>Dit is de meest interessante groep als je kijkt naar hoe mensen reageren. Ze deden niets stoms uit zichzelf. Ze werden slim gemanipuleerd. De urgentie in de berichten ("nu meteen inloggen of je account wordt geblokkeerd!") zorgde voor stress, en onder stress stopt het kritisch denken. Ze reageerden automatisch.</p>
+        <p>Klein (1998) legt dit uit in zijn RPD-model: onder tijdsdruk herkennen mensen patronen en handelen daarop, zonder echt na te denken. De hackers hadden de berichten zo gemaakt dat ze leken op normale IT-meldingen. Daardoor werd het patroon herkend als "gewoon" en reageerden medewerkers zonder te twijfelen. Achteraf zullen velen zich schuldig hebben gevoeld, maar het was eigenlijk een systeemprobleem. Ze zijn nooit goed genoeg getraind om dit patroon te herkennen.</p>
 
         <h4>De klanten</h4>
         <ul>
@@ -215,22 +222,23 @@
         <h3>Na de crisis</h3>
         <div class="info-card">
             <p><strong>Klanten:</strong> Drie keer meer overstappers dan normaal. Wantrouwen blijft lang hangen.</p>
-            <p><strong>Odido:</strong> Enorme reputatieschade, juridische procedures, en verplichte investeringen in betere beveiliging maar dat had eerder gemoeten.</p>
+            <p><strong>Odido:</strong> Enorme reputatieschade, juridische procedures, en verplichte investeringen in betere beveiliging. Maar dat had eerder gemoeten.</p>
         </div>
     </section>
 
     <!-- 3. MODELLEN -->
     <section id="modellen">
         <h2>3. Theoretische Modellen</h2>
-        <p>Om beter te begrijpen waarom mensen deden wat ze deden, gebruik ik twee modellen. Samen geven ze een completer beeld dan elk model apart zou geven.</p>
+        <p>Om beter te begrijpen waarom mensen deden wat ze deden, gebruik ik twee modellen. Samen geven ze een completer beeld dan elk model apart zou geven. Toch hebben beide ook beperkingen. Die neem ik mee in mijn vergelijking.</p>
 
         <div class="model-box">
             <h3>Model 1: Beslissingen nemen onder stress</h3>
-            <h4>Recognition-Primed Decision Making Klein (1998)</h4>
-            <p>Dit model zegt dat mensen onder tijdsdruk geen keuzes afwegen, maar automatisch reageren op wat ze herkennen. Hoe meer stress, hoe meer je op de automatische piloot gaat je doet wat "normaal" voelt, zonder er echt over na te denken.</p>
+            <h4>Recognition-Primed Decision Making, Klein (1998)</h4>
+            <p>Dit model zegt dat mensen onder tijdsdruk geen keuzes afwegen, maar automatisch reageren op wat ze herkennen. Hoe meer stress, hoe meer je op de automatische piloot gaat. Je doet wat "normaal" voelt, zonder er echt over na te denken.</p>
 
             <h4>Bij de medewerkers die phishing ontvingen:</h4>
-            <p>De e-mail zag er echt uit. Het gevoel van urgentie zorgde voor stress. En onder stress val je terug op herkenning: "dit lijkt op een normale mail, dus ik vertrouw het." Er was geen moment van "wacht even, klopt dit wel?" De hackers misbruikten precies dit mechanisme.</p>
+            <p>De e-mail zag er echt uit. Het gevoel van urgentie zorgde voor stress. En onder stress val je terug op herkenning: "dit lijkt op een normale mail, dus ik vertrouw het." Er was geen moment van "wacht even, klopt dit wel?" De hackers misbruikten precies dit mechanisme door de mail zo te ontwerpen dat hij paste bij de bestaande herkenningspatronen van medewerkers.</p>
+            <p>Wat dit model ook laat zien: de oplossing is niet "wees slimmer" maar "leer andere dingen herkennen". Pas als medewerkers geleerd hebben om urgentie zelf als verdacht te zien, kan het RPD-model in hun voordeel werken.</p>
 
             <h4>Bij het management:</h4>
             <p>Hier werkte het model positief. Ze hadden in 2024 al een datalek meegemaakt. Die ervaring zat in hun geheugen, waardoor ze nu sneller en beter konden beslissen: geen losgeld, snel communiceren. Zanders (2022) benadrukt dit ook: ervaring is cruciaal in crisismanagement, omdat het beslissingen sneller en beter maakt.</p>
@@ -238,33 +246,34 @@
 
         <div class="model-box">
             <h3>Model 2: Fight, Flight of Freeze</h3>
-            <h4>Stressrespons Cannon (1915), uitgewerkt door Zanders (2022)</h4>
+            <h4>Stressrespons, Cannon (1915), uitgewerkt door Zanders (2022)</h4>
             <p>Bij grote stress reageert ons lichaam met drie oerinstincten: aanvallen (fight), vermijden (flight), of verstarren (freeze). In deze crisis zie je alle drie terug bij de verschillende groepen.</p>
 
             <h4>IT-team → Fight</h4>
             <p>Systemen afsluiten, forensisch onderzoek starten, externe experts bellen. Actief aanpakken. Dit is de beste respons in een technische crisis.</p>
 
             <h4>Management → Fight (verbeterd ten opzichte van 2024)</h4>
-            <p>Snel communiceren en geen losgeld betalen. Ze kozen voor actie in plaats van afwachten een verbetering ten opzichte van de vorige keer.</p>
+            <p>Snel communiceren en geen losgeld betalen. Ze kozen voor actie in plaats van afwachten. Dat was een verbetering ten opzichte van de vorige keer.</p>
 
             <h4>Medewerkers die de phishing mail kregen → Freeze</h4>
-            <p>Ze konden niet meer kritisch nadenken. De paniek zorgde ervoor dat ze automatisch gehoorzaamden aan de "autoriteit" in de mail. Dit is een klassieke freeze-respons: het brein blokkeert onder druk. Ze werden de zwakste schakel niet omdat ze onvoorzichtig waren, maar omdat hun training tekortschoot.</p>
+            <p>Ze konden niet meer kritisch nadenken. De paniek zorgde ervoor dat ze automatisch gehoorzaamden aan de "autoriteit" in de mail. Dit is een klassieke freeze-respons: het brein blokkeert onder druk. Ze werden de zwakste schakel, niet omdat ze onvoorzichtig waren, maar omdat hun training tekortschoot.</p>
 
             <h4>Klanten → Mix van alle drie</h4>
             <p>Sommigen stapten direct over (fight), anderen negeerden de waarschuwingen (flight), en weer anderen wisten gewoon niet wat ze moesten doen (freeze).</p>
         </div>
 
         <div class="vergelijk-box">
-            <h4>🔍 Waarom gebruik ik juist deze twee modellen samen?</h4>
-            <p>Het RPD-model legt uit <em>wat</em> mensen besloten namelijk handelen op herkenning in plaats van rustig nadenken. Het Fight/Flight/Freeze-model legt uit <em>waarom</em> dat zo ging omdat stress het kritisch denken uitschakelt en oeroude overlevingsinstincten het overnemen.</p>
-            <p>Alleen het eerste model zou je laten denken dat medewerkers domme keuzes maakten. Maar met het tweede model zie je dat het een automatische lichaamsreactie was op druk en urgentie. Samen maken ze duidelijk: dit was geen kwestie van slordigheid, maar van menselijke psychologie. Zanders (2022) benadrukt dat crisisgedrag pas écht te begrijpen is als je zowel besluitvorming als stressreacties meeneemt in je analyse precies wat deze twee modellen samen doen.</p>
+            <h4>🔍 Kritische vergelijking: sterktes en beperkingen van beide modellen</h4>
+            <p>Het RPD-model legt uit <em>wat</em> mensen besloten, namelijk handelen op herkenning in plaats van rustig nadenken. Het Fight/Flight/Freeze-model legt uit <em>waarom</em> dat zo ging, omdat stress het kritisch denken uitschakelt en oude overlevingsinstincten het overnemen.</p>
+            <p>Samen dekken ze verschillende lagen van hetzelfde probleem. Maar beide modellen hebben ook grenzen. Het RPD-model gaat uit van mensen met ervaring. Bij minder getrainde medewerkers ontbreekt die ervaring, waardoor het model niet altijd opgaat. Het Fight/Flight/Freeze-model verklaart de emotionele reactie goed, maar zegt minder over hoe iemand denkt in zo'n moment.</p>
+            <p>Samen geven ze een beter beeld: de freeze-reactie (model 2) zorgt ervoor dat mensen geen tijd nemen om kritisch te kijken (model 1). Zanders (2022) zegt dat je crisisgedrag alleen echt begrijpt als je zowel naar beslissingen als naar stressreacties kijkt. Dat is precies wat deze twee modellen samen doen. Alleen een psychologisch model zou de technische kant missen. Alleen een technisch model zou de menselijke kant onderschatten.</p>
         </div>
     </section>
 
     <!-- 4. HANDELINGSPERSPECTIEVEN -->
     <section id="handelingen">
         <h2>4. Handelingsperspectieven</h2>
-        <p style="font-size: 1.05rem; margin-bottom: 40px;">Drie concrete acties die kunnen helpen om een volgende crisis te voorkomen of beter aan te pakken:</p>
+        <p style="font-size: 1.05rem; margin-bottom: 40px;">Drie concrete acties die kunnen helpen om een volgende crisis te voorkomen of beter aan te pakken. Bij elk perspectief leg ik expliciet uit welk menselijk gedrag het aanpakt en waarom dat werkt.</p>
 
         <div class="action-grid">
             <div class="action-card">
@@ -272,8 +281,10 @@
                 <div class="action-title">Anti-Phishing Training met Simulaties</div>
                 <h4>Voor wie:</h4>
                 <p>Alle medewerkers van Odido</p>
+                <h4>Welk gedrag pakt dit aan?</h4>
+                <p>De medewerkers in deze crisis reageerden automatisch en zonder te twijfelen. Dat is precies wat het RPD-model beschrijft: mensen herkennen een patroon en handelen erop, zonder na te denken. Trainingen met neppe phishing-mails werken omdat ze nieuwe gewoontes aanleren. Medewerkers leren om urgentie en druk juist als verdacht te zien. Zo verschuift de automatische reactie van "dit klopt" naar "wacht even, dit voelt te dringend".</p>
                 <h4>Waarom?</h4>
-                <p>Volgens het principe van Stress Inoculation Training (Meichenbaum, 1985) leer je beter omgaan met druk als je er regelmatig mee oefent in een veilige omgeving. Zanders (2022) sluit hier op aan: training en herhaling zijn de basis van goed crisisgedrag. Door medewerkers te trainen, verklein je de kans dat ze freeze-reageren op een echte phishing aanval.</p>
+                <p>Volgens het principe van Stress Inoculation Training (Meichenbaum, 1985) leer je beter omgaan met druk als je er regelmatig mee oefent in een veilige omgeving. Zanders (2022) sluit hier op aan: training en herhaling zijn de basis van goed crisisgedrag.</p>
                 <h4>Concreet:</h4>
                 <ul>
                     <li>Maandelijks neppe phishing e-mails sturen binnen het bedrijf</li>
@@ -290,8 +301,10 @@
                 <div class="action-title">Zero-Trust Architectuur invoeren</div>
                 <h4>Voor wie:</h4>
                 <p>Het IT-team en systeembeheerders van Odido</p>
+                <h4>Welk gedrag pakt dit aan?</h4>
+                <p>Zelfs bij de beste training zullen mensen soms de verkeerde keuze maken. Dat hoort gewoon bij menselijk gedrag onder druk. Zero-Trust pakt dit aan door het systeem zo in te richten dat een menselijke fout niet meteen leidt tot maximale schade. Als iemand toch een fout maakt, kan de hacker nog steeds niet bij alles.</p>
                 <h4>Waarom?</h4>
-                <p>Het Defense in Depth principe zegt: vertrouw nooit op één beveiligingslaag. Zero-Trust gaat verder: vertrouw niemand automatisch, ook geen ingelogde medewerker. Dit ontbrak bij Odido. Na één succesvolle inlog was alles toegankelijk. Zanders (2022) beschrijft hoe organisaties te laat beseffen dat toegangsbeheer een cruciaal onderdeel is van crisispreventie.</p>
+                <p>Het Defense in Depth principe zegt: vertrouw nooit op één beveiligingslaag. Zero-Trust gaat nog verder: vertrouw niemand automatisch, ook geen ingelogde medewerker. Bij Odido was na één succesvolle inlog alles toegankelijk. Zanders (2022) beschrijft hoe organisaties te laat inzien dat goede toegangscontrole een groot onderdeel is van crisispreventie.</p>
                 <h4>Concreet:</h4>
                 <ul>
                     <li><strong>Least Privilege Access:</strong> elke medewerker ziet alleen wat nodig is</li>
@@ -308,8 +321,8 @@
                 <div class="action-title">Crisis Kit voor getroffen klanten</div>
                 <h4>Voor wie:</h4>
                 <p>De 6,2 miljoen klanten wiens data is gelekt</p>
-                <h4>Waarom?</h4>
-                <p>Psychological First Aid (Brymer et al., 2006) stelt dat mensen na een schokkende gebeurtenis behoefte hebben aan veiligheid, duidelijkheid, controle en hoop. Een algemeen mailtje met "er is een datalek" geeft niets van dat alles. Klanten voelden zich machteloos, maar dat kun je doorbreken door ze concreet te helpen.</p>
+                <h4>Welk gedrag pakt dit aan?</h4>
+                <p>Klanten reageerden met een mix van fight, flight en freeze, en dat is begrijpelijk. Als je je machteloos voelt en geen duidelijkheid krijgt, ga je vluchten of verstarren. Door klanten concrete dingen te geven die ze kunnen doen, geef je ze controle terug. Dat activeert een positieve fight-reactie. Psychological First Aid (Brymer et al., 2006) zegt dat mensen na een schokkende situatie behoefte hebben aan veiligheid, duidelijkheid, controle en hoop. Een algemeen mailtje met "er is een datalek" geeft niets van dat alles.</p>
                 <h4>Concreet:</h4>
                 <ul>
                     <li><strong>Persoonlijk overzicht:</strong> welke gegevens van jou zijn gelekt en wat het risico is</li>
@@ -318,7 +331,7 @@
                     <li><strong>Wekelijkse updates:</strong> wat doet Odido om dit te voorkomen?</li>
                 </ul>
                 <h4>Resultaat:</h4>
-                <p>Klanten voelen zich serieus genomen. Dit vertraagt het klantverlies en helpt vertrouwen sneller te herstellen. Nu stapten drie keer zoveel klanten over als normaal goede communicatie had dat kunnen verminderen.</p>
+                <p>Klanten voelen zich serieus genomen en krijgen controle terug over een situatie waarin ze zich machteloos voelden. Dit vertraagt het klantverlies en helpt vertrouwen sneller te herstellen. Nu stapten drie keer zoveel klanten over als normaal. Gerichte communicatie had dat kunnen verminderen.</p>
             </div>
         </div>
     </section>
@@ -329,37 +342,39 @@
         <div class="reflection-box">
 
             <h3>Wat viel me op aan hoe mensen reageerden?</h3>
-            <p>Het meest opvallende vind ik het verschil tussen het IT-team en de medewerkers die de phishing e-mail ontvingen. Het IT-team pakte het goed aan en ze wisten wat ze moesten doen. Maar de medewerkers die de hack eigenlijk mogelijk maakten, hadden in mijn ogen eigenlijk geen eerlijke kans. Ze werden slim gemanipuleerd op een moment van stress, en hun brein deed precies wat een brein onder druk doet: automatisch reageren zonder na te denken.</p>
-            <p>Dat vind ik de belangrijkste les van deze crisis: het was geen domheid, het was menselijke psychologie. En als organisatie ben je verantwoordelijk om mensen beter voor te bereiden dan Odido heeft gedaan. Zanders (2022) schrijft dat organisaties na een crisis vaak goede plannen maken maar die vervolgens niet uitvoeren. Dat lijkt hier na de hack van 2024 ook te zijn gebeurd.</p>
-            <p>Wat me ook positief opviel: het management deed het duidelijk beter dan in 2024. Sneller communiceren en geen losgeld betalen waren de juiste keuzes. Dat laat zien dat je kunt leren van een crisis, al had het liever daarvóór gebeurd.</p>
+            <p>Het meest opvallende vind ik het verschil tussen het IT-team en de medewerkers die de phishing e-mail ontvingen. Het IT-team pakte het goed aan. Ze wisten wat ze moesten doen. Maar de medewerkers die de hack eigenlijk mogelijk maakten, hadden in mijn ogen geen eerlijke kans. Ze werden slim gemanipuleerd op een moment van stress, en hun brein deed precies wat een brein onder druk doet: automatisch reageren zonder na te denken.</p>
+            <p>Dat vind ik de belangrijkste les van deze crisis: het was geen domheid, het was menselijke psychologie. En als organisatie ben je verantwoordelijk om mensen beter voor te bereiden dan Odido heeft gedaan. Zanders (2022) schrijft dat organisaties na een crisis vaak goede plannen maken maar die vervolgens niet uitvoeren. Dat lijkt hier, na de hack van 2024, ook te zijn gebeurd.</p>
+            <p>Wat me ook positief opviel: het management deed het duidelijk beter dan in 2024. Sneller communiceren en geen losgeld betalen waren de juiste keuzes. Dat laat zien dat je kunt leren van een crisis, al had het liever daarvoor gebeurd.</p>
 
-            <h3>Hoe zou ik zelf reageren?</h3>
-            <p>Eerlijk gezegd weet ik niet zeker of ik altijd de phishing e-mail zou herkennen. Ik weet nu hoe het werkt, maar als je midden in een drukke dag een dringende boodschap krijgt die er professioneel uitziet, is het makkelijker om automatisch te reageren dan je denkt. Wat ik wél denk dat ik zou doen:</p>
+            <h3>Hoe zou ik zelf reageren, en waarom?</h3>
+            <p>Eerlijk gezegd weet ik niet zeker of ik altijd een phishing e-mail zou herkennen. En als ik eerlijk naar mezelf kijk, weet ik ook waarom: ik heb nog nooit echt onder die druk gestaan. Mijn kennis is theoretisch. Ik weet hoe phishing werkt, maar dat weten en dat voelen zijn twee verschillende dingen. Dat verschil is precies wat het RPD-model laat zien: beslissingen onder druk worden bepaald door wat je herkent vanuit ervaring. En als je die situatie nooit echt geoefend hebt, herken je hem niet snel genoeg.</p>
+            <p>Wat ik wél denk dat ik zou doen:</p>
             <ul>
-                <li>Even stoppen als iets "dringend" is juist dan moet je langzamer denken</li>
+                <li>Even stoppen als iets "dringend" is. Juist dan moet je langzamer denken</li>
                 <li>Nooit een 2FA-code doorgeven, ook niet als iemand van "IT" belt</li>
                 <li>Bij twijfel zelf terugbellen via het officiële nummer, niet via het nummer in de mail</li>
                 <li>Collega's of IT-security waarschuwen als iets raar voelt</li>
             </ul>
-            <p>Als ik deel zou uitmaken van een crisisteam, zou ik me focussen op wat ik kan: de technische kant analyseren, bijhouden wat er precies is gebeurd, en zorgen dat communicatie naar buiten duidelijk en eerlijk is. Liever snel iets zeggen met incomplete informatie dan weken zwijgen.</p>
+            <p>Als ik deel zou uitmaken van een crisisteam, zou ik me focussen op wat ik kan: de technische kant analyseren, bijhouden wat er precies is gebeurd, en zorgen dat de communicatie naar buiten duidelijk en eerlijk is. Liever snel iets zeggen met niet alle informatie dan weken lang niks zeggen.</p>
 
             <h3>Mijn sterke punten in een crisis</h3>
-            <p><strong>Ik denk kritisch bij dringende berichten.</strong> Ik ben van nature wat wantrouwig als iets "nu meteen" moet dat helpt in dit soort situaties.</p>
-            <p><strong>Ik kan technische problemen stap voor stap analyseren.</strong> Ik raak niet meteen in paniek als iets fout gaat, maar probeer eerst te begrijpen wat er aan de hand is.</p>
-            <p><strong>Ik kan goed uitleggen hoe dingen werken.</strong> Dat helpt bij communicatie naar mensen die minder technisch zijn ingesteld.</p>
+            <p><strong>Ik denk kritisch bij dringende berichten.</strong> Ik ben van nature wat wantrouwig als iets "nu meteen" moet. Dat helpt in dit soort situaties. Ik laat urgentie niet zomaar mijn beslissingen overnemen.</p>
+            <p><strong>Ik kan technische problemen stap voor stap analyseren.</strong> Ik raak niet meteen in paniek als iets fout gaat, maar probeer eerst te begrijpen wat er aan de hand is. Daardoor blijf ik functioneel in een stressvolle situatie.</p>
+            <p><strong>Ik kan goed uitleggen hoe dingen werken.</strong> Dat helpt bij communicatie naar mensen die minder technisch zijn. Dat is een nuttige vaardigheid in een crisis.</p>
 
-            <h3>Wat kan ik nog beter?</h3>
-            <p><strong>Omgaan met echte druk.</strong> Een crisis met miljoenen getroffen klanten is iets heel anders dan een schoolopdracht. Die druk heb ik nog nooit echt gevoeld ik weet niet zeker hoe ik reageer als het er echt op aankomt.</p>
-            <p><strong>Empathie tonen.</strong> Als technicus wil ik het probleem oplossen. Maar klanten willen ook gehoord worden. Dat is iets wat ik bewust blijf oefenen.</p>
-            <p><strong>Samenwerken onder druk.</strong> Ik werk liever zelfstandig, maar in een crisis heb je elkaar nodig. Daar wil ik beter in worden.</p>
+            <h3>Wat kan ik nog beter, en waarom is dat lastig voor mij?</h3>
+            <p><strong>Omgaan met echte druk.</strong> Een crisis met miljoenen getroffen klanten is iets heel anders dan een schoolopdracht. Die druk heb ik nog nooit echt gevoeld. Ik weet niet zeker hoe ik reageer als het er echt op aankomt. Om dat te verbeteren, moet ik situaties opzoeken die me echt uit mijn comfortzone halen, zoals een stage of een crisisoefening.</p>
+            <p><strong>Empathie tonen onder druk.</strong> Als technicus wil ik het probleem oplossen. Maar klanten willen ook gehoord worden. In een crisis zijn beide nodig: het probleem aanpakken en mensen het gevoel geven dat ze serieus genomen worden. Ik merk dat ik snel doorga naar de oplossing en de emotie oversla. Daar wil ik bewuster in worden.</p>
+            <p><strong>Samenwerken onder druk.</strong> Ik werk liever zelfstandig, maar in een crisis heb je elkaar nodig. Ik neem mijn beslissingen liever alleen, en dat is in een team een risico. Veerkracht in een crisis is niet alleen iets persoonlijks, het is ook iets wat je samen doet. Daar wil ik beter in worden.</p>
 
             <h3>Hoe ga ik mezelf verder ontwikkelen?</h3>
             <p>Mijn ontwikkeling zit niet in grote stappen, maar in kleine gewoontes die ik nu al kan beginnen:</p>
             <ul>
                 <li><strong>Leren van wat er misgaat bij anderen.</strong> Cases zoals Odido zijn eigenlijk gratis lessen. Ik lees dit soort nieuwsberichten en probeer er iets van mee te nemen in mijn eigen gedrag.</li>
-                <li><strong>Verificatie als automatisme.</strong> Als iemand mij iets vraagt via een bericht of mail, check ik dat via een officieel kanaal. Dat probeer ik gewoon een gewoonte te maken.</li>
-                <li><strong>"Dringend" zien als een waarschuwingssignaal.</strong> Ik weet nu dat urgentie een manipulatietechniek is. Die bewustwording helpt al enorm.</li>
-                <li><strong>Communicatievaardigheden oefenen via school.</strong> Presentaties en groepsopdrachten helpen me om ook onder druk duidelijk te blijven communiceren ook naar mensen zonder technische achtergrond.</li>
+                <li><strong>Verificatie als gewoonte.</strong> Als iemand mij iets vraagt via een bericht of mail, check ik dat via een officieel kanaal. Dat probeer ik gewoon een gewoonte te maken.</li>
+                <li><strong>"Dringend" zien als een waarschuwingssignaal.</strong> Ik weet nu dat urgentie een manipulatietechniek is. Die bewustwording helpt al. Maar ik moet het ook kunnen toepassen als ik zelf gestrest ben, niet alleen als ik er rustig over nadenk.</li>
+                <li><strong>Communicatievaardigheden oefenen via school.</strong> Presentaties en groepsopdrachten helpen me om ook onder druk duidelijk te blijven communiceren, ook naar mensen zonder technische achtergrond.</li>
+                <li><strong>Stage als testomgeving.</strong> In een echte werkomgeving, onder echte druk, zal ik ontdekken hoe ik echt reageer. Dat is iets wat je niet kunt leren uit een boek.</li>
             </ul>
         </div>
     </section>
@@ -379,6 +394,11 @@
                 <li>NCSC. (2024). <em>Cybersecuritybeeld Nederland 2024</em>. Den Haag: Nationaal Cyber Security Centrum. Geraadpleegd via <a href="https://www.ncsc.nl">ncsc.nl</a></li>
                 <li>Hogeschool Avans. (2026). <em>Lesmateriaal Crisismanagement</em>. Geraadpleegd via Brightspace</li>
             </ul>
+        </div>
+
+        <div class="ai-box">
+            <strong>🤖 Verantwoording AI-gebruik</strong><br><br>
+            Bij het maken van deze analyse is Claude (Anthropic) gebruikt als hulpmiddel. AI heb ik ingezet om ideeën te structureren, zinnen te verbeteren en feedback te verwerken. Alle inhoudelijke keuzes, analyses, modeltoepassingen en reflecties zijn van mezelf. Bronnen heb ik zelf opgezocht en gecheckt. 
         </div>
     </section>
 
